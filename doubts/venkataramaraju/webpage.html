@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		html,head,h1,h2,h3,h4,h5,h6,ul,ol,li{
+			padding: 0px;
+			margin: 0px;
+		}
+		div.header{
+			background-color: black;
+		}
+		ul li{
+			float: left;
+			padding: 15px;
+			list-style-type: none;
+		}
+		div.header ul li:last-of-type{
+			float: right;
+		}
+		ul li a{
+			color: red;
+			text-decoration: none;
+		}
+		ul li:hover{
+			background-color: white;
+		}
+		ul li:hover a{
+			color:green;
+		}
+		br.clearfix{
+			clear: both;
+		}
+
+		div.banner{
+			background-image: url("images/chicago.jpg");
+			position: relative;
+			height:532px;
+		}
+		div.banner div{
+			position: absolute;
+			bottom: 50px;
+			left: 40%;
+			color: white;
+		}
+		div.banner  h3{
+			text-align: center;
+			margin-bottom: 30px;
+		}
+		div.banner p{
+			text-align: center;
+			background-color: red;
+		}
+		div.content{
+			background-color: lightgrey;
+		}
+		div.content1 h2,h3{
+			text-align: center;
+		}
+		div.content div.content2{
+			/*background-color: white;*/
+			width:800;
+		}
+		
+		div.content div.content2 div.member{
+			float:left;
+			width: 30%;
+			padding: :30px;
+			margin: 10px;			
+		}
+		div.content div.content2 div.member img{
+			width: 70%;
+		}
+		div.content div.content2 div.member p{
+			text-align: center;
+		}
+		.clearfix{
+			clear:both;
+		}
+	</style>
+</head>
+<body>
+	<div class="header">
+		<ul>
+			<li><a href="#home">home</a></li>
+			<li><a href="#band">band</a></li>
+			<li><a href="#tour">tour</a></li>
+			<li><a href="#contact">contact</a></li>
+			<li><a href="#">more</a></li>
+			<li><a href="#">search</a></li>
+			<br class="clearfix">
+		</ul>
+	</div>
+		<div class="banner">
+			<!-- <img src="chicago.jpg"> -->
+			<div>
+				<h3>chicago</h3>
+				<p>welcome to this page</p>
+			
+			</div>
+		</div>
+		<div class="content">
+			<div class="content1">
+				<h2>THE BAND</h2>
+				<h3>We love music</h3>
+				<p>We have created a fictional band website. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+			</div>
+			<div class="content2">
+				<div class="member member1">
+					<p>name</p>
+					<img src="images/bandmember.jpg">
+				</div>
+				<div class="member member2">
+					<p>name</p>
+					<img src="images/bandmember.jpg">
+				</div>
+				<div class="member member3">
+					<p>name</p>
+					<img src="images/bandmember.jpg">
+				</div>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+		<div class="content3">
+			<div class="text1">
+				<h2>tour dates</h2>
+				<h2>Remember to book your tickets!</h2>
+			</div>
+			<div class="text2">
+				<input type="textfield" placeholder="october">
+				<input type="textfield" placeholder="november">
+				<input type="textfield" placeholder="december">
+			</div>
+			<div class="text3">
+				<img src="images/newyork.jpg">
+				<img src="images/paris.jpg">
+				<img src="images/sanfran.jpg">
+				<br class="clearfix">
+			</div>
+		</div>
+</body>
+</html>
