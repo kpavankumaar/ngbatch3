@@ -1,0 +1,74 @@
+<!-- https://www.w3schools.com/w3css/tryw3css_templates_band.htm#band -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		html,body,h1,h2,h3,h4,h5,h6,p,ul,li,ol,pre,blockquote{
+			padding:0px;
+			margin:0px;
+			font-family:sans-serif;
+		}
+		.header ul{
+			background-color:black;
+		}
+		.header ul li{
+			list-style-type: none;
+			float:left;
+			padding:15px;
+			font-size:20px;
+		}
+		.header ul li:hover {
+			background-color: lightgrey;
+			color:black;
+		}
+		.header ul li:hover a {
+			color:black;
+		}
+		.header ul li:last-of-type{
+			float:right;
+		}
+		.header ul li a{
+			color:white;
+			text-decoration: none;
+		}
+		br{
+			clear:both;
+		}
+		.banner{
+			background-image:url('images/banner.jpg');
+			height:500px;
+			color:white;
+			position: relative;
+		}
+		.banner div{
+			position :absolute;
+			bottom :20px;
+			left:20%;
+		}
+		.banner div h3,.banner div p{
+			text-align:center;
+		}
+	</style>
+</head>
+<body>
+	<div class="header">
+		<ul>
+			<li><a href="#">Home</a></li>
+			<li><a href="#">Band</a></li>				
+			<li><a href="#">Tour</a></li>
+			<li><a href="#">Contact </a></li>
+			<li><a href="#">More</a></li>
+			<li><a href="#">Search</a></li>
+			<br>
+		</ul>
+	</div>
+	<div class="banner">
+		<div>
+			<h3>heading</h3>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>	
+		</div>
+		
+	</div>
+</body>
+</html>
