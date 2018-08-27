@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		var table = {
+			color:'dark',
+			make: 'wooden',
+			supports: function(){
+				console.log('supports wieght upto 25kgs');
+			}
+		}
+		var arr = [10, 'ravi',50];
+		var mainCourseMenu = ['biryani', 'roti','jeera rice', 'naan'];
+		var curryMenu = ['dal','paneerbuttermasala','mixedveg']; 
+		
+
+		function goToParadise(mainItem,curry){
+			for(var i = 0 ; i < 4 ; i = i+1){
+				if(mainCourseMenu[i] === mainItem){
+					console.log('get me'+' ' + mainItem + ' ' +curry);
+				}
+			}
+			
+		}
+		goToParadise('jeera rice','mixedveg');
+		var a = 10;
+		// while(a){
+		// 	console.log('test');
+		// 	a = a-1;
+		// }
+		for(var i = 0 ; i < 10 ; i = i + 1){
+			console.log('test')
+		}
+	</script>
+</body>
+</html>
