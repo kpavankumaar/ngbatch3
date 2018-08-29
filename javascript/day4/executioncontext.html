@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		console.log(a);
+		var a =10;
+		var b = a;
+		console.log(a);
+		c();
+		function c(){
+			var b = 40;
+			console.log(b);
+		}
+		function d(){
+			var b = 30;
+			c();
+			console.log(b);
+		}
+		function e(){
+			console.log(b);
+			d();
+		}
+		e();
+		var table = {
+			color:'red',
+			supports:function(){
+				console.log(this);
+				var selfthis = this;
+				function test(){
+					console.log(selfthis);
+				}
+				test();
+			}
+		}
+		function run(){
+			console.log(this);
+		}
+	</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
