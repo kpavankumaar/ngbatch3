@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	function test_1(){
+		console.log('test');
+	}
+
+
+	function run(test){
+		var arr=[];
+		arr.push(test(1));
+		arr.push(test(1));
+		arr.push(test(2));
+		return arr;
+	}
+	run(function(a){
+		console.log('this is a call back' + a);
+		return a;
+	})
+	
+	var arr = [{'name':'srk'},{'name':'ravi'},{'name':'pavan'}];
+
+	var arrOfNames = arr.map(function(obj){
+		console.log(obj);
+		return obj.name;
+	})
+</script>
+</body>
+</html>

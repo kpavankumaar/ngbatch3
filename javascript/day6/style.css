@@ -1,0 +1,15 @@
+html,body,h3,ul,li{
+	margin:0px;
+	padding:0px;
+}
+ul li{
+	width:200px;
+	border:2px solid black;
+	float:left;
+	list-style-type: none;
+}
+ul::after, ul::before{
+	content:'';
+	display: block;
+	clear:both;
+}
