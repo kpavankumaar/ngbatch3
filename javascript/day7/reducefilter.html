@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		var arr1 = [1,2,3,4,5];
+		function filter (callback){
+			var arr3=[]
+			for(var i = 0 ; i < arr1.length; i = i + 1 ){
+				var val = callback(arr1[i]);
+				if (val !== undefined){
+					arr3.push(val);	
+				}
+				
+			}
+			return arr3;
+		}
+		function evenNum (item){
+			if (item % 2 === 0) {
+				return item;
+			}
+		}
+		
+		function oddNum (item){
+			if (item % 2 !== 0) {
+				return item;
+			}
+		}
+		
+		var even = filter(evenNum);
+		var odd = filter(oddNum);
+
+		// var arr2 = arr1.filter(function(item){
+		// 	if (item % 2 === 0) {
+		// 		return item;
+		// 	}
+		// })
+		var arr4 = [1,2,3,4,5];
+		var obj = {num:5};
+		var reducedVal = arr4.reduce(function(cum,currentVal,index,array){
+			console.log(`cumalitive ${cum.num}`);
+			console.log(`currentVal ${currentVal}`);
+			console.log(`index ${index}`);
+			console.log(`array ${array}`);
+			console.log('*****************')
+			cum.num = cum.num + currentVal;
+			return cum;
+		},obj)
+	</script>
+</body>
+</html>
