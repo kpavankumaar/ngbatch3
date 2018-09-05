@@ -1,4 +1,3 @@
-k.pavankumaar@gmail.com
 var data = [
     {
         "id": 1,

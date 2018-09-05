@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h3 id="heading">heading</h3>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	<button>Show</button>
+	<button>Hide</button>
+	<input type="text" name="username">
+<script type="text/javascript" src="data.js"></script>	
+<script type="text/javascript">
+	var headingEl = document.getElementById('heading');
+	var para = document.getElementsByTagName('p')[0];
+	var showBtn = document.getElementsByTagName('button')[0];
+	var hideBtn = document.getElementsByTagName('button')[1];
+	var box = document.createElement('div');
+	var imageEl = document.createElement('img');
+	imageEl.setAttribute('src','https://images.pexels.com/photos/248797/pexels-photo-248797.jpeg?auto=compress&cs=tinysrgb&h=350');
+	box.appendChild(imageEl);
+	document.body.appendChild(box);
+	hideBtn.onclick = function(){
+		console.log('you have clicked on hide button');
+		para.style.display = 'none';
+	}
+	// 'use strict'
+	console.log(data);
+	for(var i=0 ; i < data.length ; i = i+1){
+		console.log(data[i].orders);
+		for(var j =0 ; j < data[i].orders.length ; j = j+1 ){
+			console.log(data[i].orders[j]);
+		}
+	}
+</script>
+</body>
+</html>
