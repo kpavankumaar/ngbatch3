@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	for(var i = 0 ; i < 5 ; i = i + 1){
+				if(main === mainMenu[i]){
+					console.log('got the ' + main +' '+ curry);
+
+				}else{
+					console.log(main + ' is not available');
+				}
+			}
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	<script type="text/javascript">
+		var num;
+		console.log(num);
+		if(false){
+			console.log('go to movie');
+		}
+		// var mainMenu = 'biryani';
+		// mainMenu = 'pulka';
+		var mainMenu = ['biryani','pulka','Jeera rice', 'kaju rice', 'butternaan'];
+
+		function goToParadise(main,curry){
+			console.log('before return statement');
+			
+			console.log('after return statement')
+			return 10;
+		}
+		var test = goToParadise('pulka','mixedvegcurry');
+		var num1 = 10
+		while(num1){
+			console.log('print me 10 times');
+			num1 = num1 - 1;
+		}
+		// for(var i = 0 ; i < 10 ; i = i + 1){
+		// 	console.log('print me '+ i +' times' );
+			
+		// }
+		var table = {
+			make: 'wooden',
+			shape: 'rectangular',
+			color: 'dark choclate',
+			supports: function(){
+				console.log('can hold weight upto 25kgs');
+			},
+			movable: function(){
+				console.log('table with wheels');
+			}
+		}
+		console.log(table);
+		// console.log(table['supports']());
+		console.log(table.supports());
+		console.log(table.movable());
+	</script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		html,body,h3,ul,li{
+			margin:0px;
+			padding:0px;
+		}
+		ul li{
+			width:200px;
+			border:2px solid black;
+			float:left;
+			list-style-type: none;
+		}
+		ul::after, ul::before{
+			content:'';
+			display: block;
+			clear:both;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<h3>Customer name </h3>
+		<ul>
+			<li>Product Name</li>
+			<li>ItemCost</li>
+		</ul>
+		<ul>
+			<li>Product Name</li>
+			<li>ItemCost</li>
+		</ul>
+		<ul>
+			<li>Total Cost</li>
+			<li>Sum of All ItemCost</li>
+		</ul>
+	</div>
+	<script type="text/javascript">
+		var eachCustUnit = document.createElement('div');
+		var eachProductUnit = document.createElement('ul');
+		var productName = document.createElement('li');
+		var itemCostForProduct = document.createElement('li');
+
+		productName.innerText = 'productName';
+		itemCostForProduct.innerText = 'item cost';
+		eachProductUnit.appendChild(productName);
+		eachProductUnit.appendChild(itemCostForProduct);
+		eachCustUnit.appendChild(eachProductUnit);
+		eachCustUnit.style.margin = '20px';
+		document.body.appendChild(eachCustUnit);
+
+	</script>
+</body>
+</html>

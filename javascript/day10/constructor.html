@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		obj = {
+			name:'ravi',
+			run:function(){
+				console.log(this.name);
+				var selfThis = this;
+				function test(){
+					console.log(selfThis);
+				}
+				test();
+			}
+		}
+		function FurnitureOrders(){
+			this.sofaSet = 'sofa';
+			this.chairs = 'chairs';
+		}
+		var customerOrder1 = new FurnitureOrders();
+		// obj.run();
+		// var customerOrder1 = new FurnitureOrders()
+	</script>
+</body>
+</html>

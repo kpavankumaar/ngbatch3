@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		console.log(calc);
+		var calc = 10 + 12 * 5 / 2 - 10;
+		var check = 3 > 2 > 1;
+		console.log(calc);
+
+		function check1(){
+			console.log(calc)
+		}
+		function check2(){
+			var calc = 15;
+			check1();
+			console.log(calc)
+		}
+		
+		function check3(){
+			calc =50;
+			check2();
+			console.log(calc)
+
+		}
+		check3();
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		console.log('before setTimeout');
+		// while(true){
+		// 	console.log('test');
+		// }
+		for(let i = 0 ; i < 10 ; i = i + 1){
+			// console.log(i)
+			setTimeout(function(){
+				console.log(i);
+			},2000);	
+		}
+		function employee(language){
+			return function(name){
+				console.log(name + ' knows '+ language );
+			}
+		}
+		var emp1 = employee('english');
+		emp1('ravi')
+		console.log('after setTimeout');
+		(function(){
+			console.log('test');
+		})()
+	</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
