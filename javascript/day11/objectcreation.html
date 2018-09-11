@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		var sofaSetInfo = [{productname:'recliner', qty: 2},'long sofa']
+		function SofaManufacturers(sofasetorder){
+			console.log('test ');
+			this.sofaOrder =  sofasetorder;
+		}
+		function FurnitureOrders(sofaset){
+
+			SofaManufacturers.call(this,sofaset);
+			this.chairs = 'chairs';
+		}
+		this.a = 10;
+		var customerOrder1 = new FurnitureOrders(sofaSetInfo);
+	</script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		var obj = {};
+		function multiple(a,b){
+			this.num1 = a;
+			this.num2 = b;
+			console.log(this.num1 * this.num2);
+		}
+		var arrOfNum = [10,20]
+		multiple.call(obj,10,30);
+		multiple.apply(obj,arrOfNum);
+
+	</script>
+</body>
+</html>
