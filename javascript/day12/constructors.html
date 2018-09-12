@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	var sofaSetInfo = [{productname:'recliner', qty: 2},'long sofa'];
+	function Chairs (qty){
+		this.chairsqty = qty 
+	}
+	function SofaManufacturers(sofasetorder){
+		console.log('test ');
+		this.sofaOrder =  sofasetorder;
+	}
+	SofaManufacturers.prototype.onlySofaOrder = function(){
+		console.log(this.sofaOrder);
+	}
+	function FurnitureOrders(sofaset,chairsqty){
+
+		SofaManufacturers.call(this,sofaset);
+		Chairs.call(this,chairsqty);
+		// this.chairsqty = chairsqty; 
+		// this.sofaOrder =  sofaset;
+		// this.myOrders = function(){
+		// 	console.log(`chairs qty : ${this.chairsqty} ; sofa order : ${this.sofaOrder}`);
+		// }
+	}
+
+	FurnitureOrders.prototype = Object.create(SofaManufacturers.prototype);
+	FurnitureOrders.prototype.myOrders = function(){
+			console.log(`chairs qty : ${this.chairsqty} ; sofa order : ${this.sofaOrder}`);
+			console.log('chairs qty ' + ' ' + this.chairsqty + ' ' + 'sofa order ' + this.sofaOrder);
+	}
+	
+	FurnitureOrders.prototype.constructor = FurnitureOrders;
+	this.a = 10;
+	var customerOrder1 = new FurnitureOrders('sofaSetInfo' , '15');
+	var customerOrder2 = new FurnitureOrders(null,10);
+	// customerOrder1.myOrders = function(){
+	// 	console.log('this is specific to customerOrder1 ')
+	// }
+</script>
+</body>
+</html>
