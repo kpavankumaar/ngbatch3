@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		function employee(language){
+			return function (name){
+				console.log(name + ' knows '+ language)
+			}
+		}
+		var emp1 = employee('Telugu');
+		emp1('Ravi');
+	</script>
+</body>
+</html>

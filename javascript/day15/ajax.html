@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		// readystate
+		var promise = new Promise(function(resolve,reject){
+			resolve(1);
+		});
+		promise.then(function(val){
+			console.log(val);
+			return val = val + 1
+
+		}).then(function(val){
+			console.log(val);
+			return val = val + 1
+
+		}).then(function(val){
+			console.log(val);
+			return val = val + 1
+
+		})
+		// get('https://jsonplaceholder.typicode.com/posts')
+		function get(url){
+			return new Promise(){
+				var xhr = new XMLHttpRequest();
+				console.log(xhr.readyState);
+				
+				xhr.open('get',url);
+				console.log(xhr.readyState);
+				xhr.onload = function(){
+					console.log(`onload ${xhr.readyState}`);
+				}
+				xhr.onprogress = function(){
+					console.log(`onprogress ${xhr.readyState}`);
+				}
+				xhr.onreadystatechange = function(){
+					console.log(xhr.status);
+					if (xhr.readyState === 4 && xhr.status === 200) {
+						console.log(xhr.response);
+					}
+				}
+				xhr.send(null);
+				console.log(xhr.readyState);
+			}
+		}
+		
+	</script>
+</body>
+</html>

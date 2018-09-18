@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		input,label{
+			display: inline-block;
+			width:150px;
+		}
+
+	</style>
+</head>
+<body>
+	<h3>Welcome to Javascript</h3>
+	<form>
+		<div>
+			<label>Friends name </label>
+			<input type="text" name="FriendsName"  >
+		</div>
+		<div id="age">
+			<label>Friends Age </label>
+			<input type="text" name="age" >
+		</div>
+		<div>
+			<label>Doing </label>
+			<textarea class="work"></textarea>
+		</div>
+		<button>submit</button>
+		<button>cancel</button>
+	</form>
+	<script type="text/javascript">
+		var buttons = document.getElementsByTagName('button');
+		var getAge = document.getElementById('age');
+		var age = getAge.querySelector('input');
+		
+		buttons[0].onclick = function(e){
+			e.preventDefault();
+			var ageInfo = age.value;
+			console.log(ageInfo);
+			var obj1 ={}
+			obj1.age = ageInfo;
+			console.log(obj1);
+		}
+
+
+	</script>
+	<script type="text/javascript">
+
+		var name = 'ravi';
+		// var isTableAvailable = prompt('Do you have table for dinner?');
+		console.log(name);
+		if(true){
+			console.log('book a table ');
+		}
+		function run(){
+			console.log('this is a place you write code ');
+		}
+		run();
+		function sum(a,b){
+			console.log(a + b);
+
+		}
+		sum(10,20);
+		var obj = {
+			name:' ravi',
+			age: 21,
+			doing: function(){
+				console.log('pursuing degree');
+			}
+		}
+		var friends = [obj,'srk','suresh'];
+		console.log(friends);
+		var i = 3;
+		while(i >= 0){
+			console.log(friends[i])	
+			i = i - 1;
+		}
+
+		for(var i = 0 ; i < 4 ; i = i+1){
+			console.log(friends[i]);
+		}
+	</script>
+
+</body>
+</html>
