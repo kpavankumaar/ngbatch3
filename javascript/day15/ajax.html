@@ -6,25 +6,29 @@
 <body>
 	<script type="text/javascript">
 		// readystate
-		var promise = new Promise(function(resolve,reject){
-			resolve(1);
-		});
-		promise.then(function(val){
-			console.log(val);
-			return val = val + 1
+		// var promise = new Promise(function(resolve,reject){
+		// 	resolve(1);
+		// });
+		// promise.then(function(val){
+		// 	console.log(val);
+		// 	return val = val + 1
 
-		}).then(function(val){
-			console.log(val);
-			return val = val + 1
+		// }).then(function(val){
+		// 	console.log(val);
+		// 	return val = val + 1
 
-		}).then(function(val){
-			console.log(val);
-			return val = val + 1
+		// }).then(function(val){
+		// 	console.log(val);
+		// 	return val = val + 1
 
-		})
-		// get('https://jsonplaceholder.typicode.com/posts')
+		// })
+		var obj = JSON.stringify(10);
+
+		var promise = get('https://jsonplaceholder.typicode.com/posts')
 		function get(url){
-			return new Promise(){
+			return new Promise(function(resolve,reject){
+
+			
 				var xhr = new XMLHttpRequest();
 				console.log(xhr.readyState);
 				
@@ -39,14 +43,21 @@
 				xhr.onreadystatechange = function(){
 					console.log(xhr.status);
 					if (xhr.readyState === 4 && xhr.status === 200) {
-						console.log(xhr.response);
+						// console.log(xhr.response);
+						resolve(xhr.response);
+					}else if(xhr.status !== 200){
+						reject('error message ' + xhr.status);
 					}
 				}
 				xhr.send(null);
 				console.log(xhr.readyState);
-			}
+			})
 		}
-		
+		promise.then(function(val){
+			
+			var value = JSON.parse(val);
+			console.log(value);
+		})
 	</script>
 </body>
 </html>
