@@ -46,6 +46,14 @@ testFn = function(a,b){
 }
 testFn(10,'test');
 
+interface sampleArr{
+    [index:number]:number
+}
+
+let arr_6 : sampleArr
+
+arr_6 = [10,20,30,40,'']
+
 
 
 
