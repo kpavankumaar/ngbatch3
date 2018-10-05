@@ -11,6 +11,8 @@ export class AppComponent {
   color = 'orange';
   width = '500px';
   information='';
+  flag = true;
+  colorarr = ['pink','green','grey'];
   toggle(){
     this.color = this.color === 'orange' ? 'lightgrey' : 'orange'
   }
@@ -22,5 +24,7 @@ export class AppComponent {
     console.log(val);
     this.information = val;
   }
-  
+  check(){
+    this.flag = this.flag === true ? false : true;
+  }
 }

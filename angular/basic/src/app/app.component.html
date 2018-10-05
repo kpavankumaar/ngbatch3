@@ -10,13 +10,20 @@
     <option>red</option>
     <option>steelblue</option>
   </select>
+  <select >
+    <option *ngFor = 'let colorname of colorarr' >{{colorname}}</option>
+  </select>
   <hr [style.width] = 'width'>
   <input type="text" [value] = 'information' (keyup) = 'update($event.target.value)' >
   <p>{{information}}</p>
   <input type="text" (keyup.enter) = 'update($event.target.value)' >
   <br>
   <input type="text" (blur) = 'update($event.target.value)' >
-  <input type="text" #data (keyup) = 'information = data.value'>
+  <input type="text" #data (keyup) = 'information = data.value'><br>
+  <input type="text" [(ngModel)] = 'information'>
+  <button (click) = 'check()'>click me</button>
+  <p *ngIf = 'flag'>if true show or else hide </p>
+  <p>{{10 * 10}}</p>
   <app-orders></app-orders>
   <app-customers></app-customers>
   <app-customerscardview></app-customerscardview>
