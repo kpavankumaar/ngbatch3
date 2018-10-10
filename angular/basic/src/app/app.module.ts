@@ -5,13 +5,15 @@ import { AppComponent } from './app.component';
 import { OrdersComponent } from './orders/orders.component';
 import { CustomersComponent } from './customers/customers.component';
 import { CustomersCardViewComponent } from './customers/cutomerscardview.component';
+import { HiddenappDirective } from './shared/hiddenapp.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     OrdersComponent,
     CustomersComponent,
-    CustomersCardViewComponent
+    CustomersCardViewComponent,
+    HiddenappDirective
   ],
   imports: [
     BrowserModule, FormsModule

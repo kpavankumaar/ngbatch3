@@ -6,6 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  defineColor = 'grey';
   title = 'Ravi';
   srcPath = './favicon.ico';
   color = 'orange';
@@ -27,4 +28,5 @@ export class AppComponent {
   check(){
     this.flag = this.flag === true ? false : true;
   }
+  selectcolors = ['red','orange','blue']
 }
