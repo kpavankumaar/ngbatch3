@@ -4,7 +4,7 @@ import { Directive,ElementRef,Input, OnInit, HostListener } from '@angular/core'
   selector: '[appHiddenapp]'
 })
 export class HiddenappDirective {
-  @Input() highlight;
+  @Input('appHiddenapp') highlight;
   constructor(private el:ElementRef) { 
     console.log('constructor ',this.highlight);
 
