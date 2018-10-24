@@ -6,6 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  newProp
+  constructor(){
+    this.newProp = 'appComponentPropertyInside Construtor';
+    console.log(this.newProp);
+  }
   defineColor = 'grey';
   title = 'Ravi';
   srcPath = './favicon.ico';
@@ -14,6 +19,16 @@ export class AppComponent {
   information='';
   flag = true;
   colorarr = ['pink','green','grey'];
+  ngOnInit(){
+    this.newProp = 'ngOnInit app component initialization ';
+    console.log(this.newProp);
+    var selfThis = this;
+    setTimeout(function(){
+      selfThis.defineColor = 'red';
+      console.log('selfThis.defineColor',selfThis.defineColor);
+    },5000)
+    console.log('this.defineColor',this.defineColor);
+  }
   toggle(){
     this.color = this.color === 'orange' ? 'lightgrey' : 'orange'
   }

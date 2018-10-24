@@ -1,6 +1,30 @@
 <p>
   reactive works!
 </p>
-<input type="text" [formControl] = 'name' placeholder="firsname ">
-<input type="text" [formControl] = 'lname' placeholder="lastname">
-<button (click) = 'update()'>Update </button>
+<div>
+  <form [formGroup] = 'profileGroup' (ngSubmit) = 'profileUpdate(profileGroup.value)' >
+      <input type="text" formControlName = 'name'  placeholder="firsname" required>
+      <input type="text" formControlName = 'lname' placeholder="lastname" required>
+      <div formGroupName = 'address'>
+        <input type="text" formControlName = 'city' placeholder="city">
+        <input type="text" formControlName = 'state' placeholder="state">
+      </div>
+      
+      <button [disabled] = 'profileGroup.invalid'> Submit</button>
+  </form>
+
+  <div *ngIf = false>
+    <input type="text" [formControl] = 'name'  placeholder="firsname ">
+    <input type="text" [formControl] = 'lname' placeholder="lastname">
+    <input type="text" [formControl] = 'city' placeholder="city">
+    <input type="text" [formControl] = 'state' placeholder="state">
+  </div>
+  <!-- <input type="text" []> -->
+  <!-- <input type="text" required [(ngModel)] = 'test' #content = 'ngModel' > 
+  <p> content value valid: {{content.valid}}</p>
+  <p> content value invalid: {{content.invalid}}</p>
+  <p> content value pristine: {{content.pristine}}</p>
+  <p> content value dirty: {{content.dirty}}</p>
+  <p> content value touched: {{content.touched}}</p> -->
+  <!-- <button (click) = 'update()'>Update </button> -->
+</div>

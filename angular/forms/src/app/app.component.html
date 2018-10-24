@@ -2,7 +2,7 @@
     <h3>Reactive forms</h3>
     <app-reactive></app-reactive>
 </div>
-<div class = 'container'>
+<div class = 'container' *ngIf = false>
     <h3>template driven form</h3>
   <form #loginForm = 'ngForm' (ngSubmit)="login(loginForm.value)" >
       <div class="form-group">

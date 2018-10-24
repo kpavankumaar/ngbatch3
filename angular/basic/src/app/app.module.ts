@@ -1,11 +1,16 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule} from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+
 import { AppComponent } from './app.component';
 import { OrdersComponent } from './orders/orders.component';
 import { CustomersComponent } from './customers/customers.component';
 import { CustomersCardViewComponent } from './customers/cutomerscardview.component';
 import { HiddenappDirective } from './shared/hiddenapp.directive';
+import { NavbarComponent } from './core/navigation/navbar/navbar.component';
+import { SubnavComponent } from './core/navigation/subnav/subnav.component';
+import { service } from './core/service/service';
 
 @NgModule({
   declarations: [
@@ -13,12 +18,14 @@ import { HiddenappDirective } from './shared/hiddenapp.directive';
     OrdersComponent,
     CustomersComponent,
     CustomersCardViewComponent,
-    HiddenappDirective
+    HiddenappDirective,
+    NavbarComponent,
+    SubnavComponent
   ],
   imports: [
-    BrowserModule, FormsModule
+    BrowserModule, FormsModule, HttpClientModule
   ],
-  providers: [],
+  providers: [service],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
