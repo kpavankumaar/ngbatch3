@@ -14,4 +14,8 @@ export class CustomersComponent{
         this.newProp = 'customerscomponent ngOnInit value';
         console.log(this.newProp);
     }
+    ngDoCheck(){
+        console.log('ngDoCheck customers component');
+        // this.backgroundColor = 'lightgreen';
+    }
 }

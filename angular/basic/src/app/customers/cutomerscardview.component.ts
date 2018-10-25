@@ -2,10 +2,14 @@ import { Component } from "@angular/core";
 
 @Component({
     selector:'app-customerscardview',
-    template:`<h2> customers card view </h2>`
+    templateUrl:'customerscardview.component.html'
 })
 export class CustomersCardViewComponent{
     newProp;
+    backgroundColor = 'lightblue';
+    updateColor(){
+        this.backgroundColor = 'green';
+    }
     constructor(){
         this.newProp = 'CardViewcomponent constructor value'
         console.log(this.newProp);
@@ -13,5 +17,9 @@ export class CustomersCardViewComponent{
     ngOnInit(){
         this.newProp = 'CardViewcomponent ngOnInit value'
         console.log(this.newProp);
+    }
+    ngDoCheck(){
+        console.log('ngDoCheck background color', this.backgroundColor);
+        // this.backgroundColor = 'lightgreen';
     }
 }

@@ -8,5 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class OrdersComponent {
 
   constructor() { }
-
+  ngDoCheck(){
+    console.log('ngDoCheck orders component');
+    // this.backgroundColor = 'lightgreen';
+  }
 }

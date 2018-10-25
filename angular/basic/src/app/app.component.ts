@@ -7,6 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   newProp
+  ngDoCheck(){
+    console.log('ngDoCheck app component');
+    // this.backgroundColor = 'lightgreen';
+  }
   constructor(){
     this.newProp = 'appComponentPropertyInside Construtor';
     console.log(this.newProp);
