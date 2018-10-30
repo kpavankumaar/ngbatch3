@@ -5,25 +5,22 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { OrdersComponent } from './orders/orders.component';
-import { CustomersComponent } from './customers/customers.component';
-import { CustomersCardViewComponent } from './customers/cutomerscardview.component';
 import { HiddenappDirective } from './shared/hiddenapp.directive';
 import { NavbarComponent } from './core/navigation/navbar/navbar.component';
-import { SubnavComponent } from './core/navigation/subnav/subnav.component';
 import { service } from './core/service/service';
+import { CustomersModule } from './customers/customersmodule';
+import { CoreModule } from './core/coremodule';
 
 @NgModule({
   declarations: [
     AppComponent,
     OrdersComponent,
-    CustomersComponent,
-    CustomersCardViewComponent,
     HiddenappDirective,
-    NavbarComponent,
-    SubnavComponent
+   
+    
   ],
   imports: [
-    BrowserModule, FormsModule, HttpClientModule
+    BrowserModule, FormsModule, HttpClientModule, CustomersModule,CoreModule
   ],
   providers: [service],
   bootstrap: [AppComponent]
